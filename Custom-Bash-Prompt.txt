@@ -1,0 +1,112 @@
+GET THIS AS YOUR PROMPT:
+
+
+[Sun Jun 27 13:15:46]
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~
+student@lfcs.lab.com 192.168.70.117 /home/student
+-->$  
+
+
+
+BY EDITING THE ~/.bashrc FILE. 
+
+-->$ vim ~/.bashrc
+
+#####################################################################################################
+#####################################################################################################
+#####################################################################################################
+
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
+IP=$(hostname -I | awk '{print $1}')
+#HOST=$(hostnamectl | grep 'Static hostname' | awk '{print $3}')
+#PS1="\n[\d \t]\n~~~~~~~~~~~~~~~~~~~~~~~~\n\n\n\n#~~~~~~~~~~~~~~~~~~~~~~~~\n\u@$HOST $IP \$PWD\n-->$ "
+PS1="\n[\d \t]\n~~~~~~~~~~~~~~~~~~~~~~~~\n\n\n\n#~~~~~~~~~~~~~~~~~~~~~~~~\n\u@\H $IP \$PWD\n-->$ "
+
+
+
+#####################################################################################################
+#####################################################################################################
+#####################################################################################################
+
+
+And then either reboot, or run: 
+
+-->$ source ~/.bashrc
+
+
+Now, when you type in a command, it tells you the time and date, and makes some seperators between outputs.
+This is useful when you do a command with a long output, so it doesnt get mashed together with other outputs.
+This could be improved by doing some color codig of the oputput.
+
+This is what it looks like when there are multiple commands' outputs on the screen. Notice how there is 
+spacing between command outputs:
+
+
+
+[Sun Jun 27 13:15:46]
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~
+student@lfcs.lab.com 192.168.70.117 /home/student
+-->$ ls -la
+total 28
+drwx------. 4 student student  163 Jun 27 13:15 .
+drwxr-xr-x. 5 root    root      52 Jun 27 11:51 ..
+-rw-------. 1 student student 3882 Jun 27 13:15 .bash_history
+-rw-r--r--. 1 student student   18 Mar 31  2020 .bash_logout
+-rw-r--r--. 1 student student  193 Mar 31  2020 .bash_profile
+-rw-r--r--. 1 student student  535 Jun 27 13:15 .bashrc
+drwx------. 2 student student   80 Jun 27 10:36 .ssh
+-rw-rw-r--. 1 student student  266 Jun 27 13:12 starthere.txt
+-rw-------. 1 student student 1815 Jun 27 13:15 .viminfo
+drwxr-xr-x. 2 student student  102 Jun 25 16:48 .vnc
+-rw-------. 1 student student  106 Jun 25 16:48 .Xauthority
+
+[Sun Jun 27 13:19:33]
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~
+student@lfcs.lab.com 192.168.70.117 /home/student
+-->$ sudo cat /etc/passwd | grep $(whoami)
+[sudo] password for student: 
+student:x:1000:1000:student:/home/student:/bin/bash
+
+[Sun Jun 27 13:20:06]
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~
+student@lfcs.lab.com 192.168.70.117 /home/student
+-->$ 
+
+
+
+
+After the command 
+ls -la
+, it shows the time that command was run [Sun Jun 27 13:19:33]
+Same with what is after 
+sudo cat /etc/passwd | grep $(whoami)
+
+
+
