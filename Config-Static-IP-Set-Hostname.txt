@@ -1,0 +1,51 @@
+Configure static IP and set hostame
+
+#######################################
+Set static IP, as shown below:
+#######################################
+
+Get your interface by either 
+
+$ ifconfig
+
+or
+
+$ ip a
+
+For this example, assume the interface is enp0s3
+
+For RHEL/CentOS Systems, edit the file:
+
+/etc/sysconfig/network-scripts/ifcfg-enp0s3
+
+Make sure to comment out BOOTPROTO=dhcp
+
+NAME=enp0s3
+DEVICE=enp0s3
+ONBOOT=yes
+BOOTPROTO=static 
+IPADDR=192.168.1.100 
+PREFIX=24 
+GATEWAY=192.168.1.1 
+DNS1=8.8.8.8
+DNS2=1.1.1.1
+
+#######################################
+Set hostname, as shown below:
+#######################################
+
+$ hostnamectl set-hostname WhatYouWantForNewHostname
+
+#######################################
+Restart the network service for 
+changes to take effect
+#######################################
+
+$ sudo systemctl restart network
+
+#######################################
+After all of this, you may have to fix 
+a problem with your SSH keys:
+#######################################
+
+$ ssh-keygen -R username@IP.address
