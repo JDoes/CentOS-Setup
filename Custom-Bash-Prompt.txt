@@ -90,11 +90,5 @@ student@lfcs.lab.com 192.168.70.117 /home/student
 
 
 
-After the command 
-ls -la
-, it shows the time that command was run [Sun Jun 27 13:19:33]
-Same with what is after 
-sudo cat /etc/passwd | grep $(whoami)
-
 
 
