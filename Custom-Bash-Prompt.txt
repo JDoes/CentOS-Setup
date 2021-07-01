@@ -1,10 +1,6 @@
 GET THIS AS YOUR PROMPT:
 
 
-[Sun Jun 27 13:15:46]
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
 #~~~~~~~~~~~~~~~~~~~~~~~~
 student@lfcs.lab.com 192.168.70.117 /home/student
@@ -50,17 +46,13 @@ And then either reboot, or run:
 -->$ source ~/.bashrc
 
 
-Now, when you type in a command, it tells you the time and date, and makes some seperators between outputs.
+Now, when you type in a command, it makes some seperators between outputs.
 This is useful when you do a command with a long output, so it doesnt get mashed together with other outputs.
 This could be improved by doing some color codig of the oputput.
 
 This is what it looks like when there are multiple commands' outputs on the screen. Notice how there is 
 spacing between command outputs:
 
-
-
-[Sun Jun 27 13:15:46]
-~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
@@ -80,9 +72,6 @@ drwx------. 2 student student   80 Jun 27 10:36 .ssh
 drwxr-xr-x. 2 student student  102 Jun 25 16:48 .vnc
 -rw-------. 1 student student  106 Jun 25 16:48 .Xauthority
 
-[Sun Jun 27 13:19:33]
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 
 #~~~~~~~~~~~~~~~~~~~~~~~~
@@ -91,8 +80,6 @@ student@lfcs.lab.com 192.168.70.117 /home/student
 [sudo] password for student: 
 student:x:1000:1000:student:/home/student:/bin/bash
 
-[Sun Jun 27 13:20:06]
-~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
